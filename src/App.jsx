@@ -1,8 +1,7 @@
 
 import './App.css'
 import Nav from './components/nav'
-import Banner from './components/Banner'
-import Card from './components/Card'
+import ProductCard from './components/ProductCard'
 import { useState } from 'react'
 
 function App() {
@@ -14,6 +13,25 @@ function App() {
 return (
   <>
   <Nav/>
+
+
+
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4">
+           <ProductCard/>
+      </div>
+
+       <div className="col-md-4">
+           <ProductCard/>
+      </div>
+      
+       <div className="col-md-4">
+           <ProductCard/>
+      </div>
+    </div>
+  </div>
+
   </>
 )
  
