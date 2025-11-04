@@ -3,7 +3,7 @@ import banner from '../assets/banner.webp'
 function Banner(){
   return (
     <div>
-      <img className='banner' src={banner} alt="" />
+      <img className=Name='banner' src={banner} alt="" />
     </div>
   )
 }

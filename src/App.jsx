@@ -25,7 +25,7 @@ return (
        <div className="col-md-4">
            <ProductCard/>
       </div>
-      
+
        <div className="col-md-4">
            <ProductCard/>
       </div>
