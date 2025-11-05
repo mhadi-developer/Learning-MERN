@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function Nav() {
+export default function Nav(props) {
+
+
+  console.log('i am in nav component',props);
+  
   let [showmenue,setShowMeanue]= useState(false)
   function handelToggle(){
     setShowMeanue(!showmenue);
@@ -38,6 +42,9 @@ export default function Nav() {
        
         <li className="nav-item">
           <a className="nav-link " href="#"><i className="bi bi-search"></i></a>
+        </li>
+          <li className="nav-item">
+          <a className="nav-link " href="#">{props.num}</a>
         </li>
       </ul>
     </div>
