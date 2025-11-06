@@ -1,5 +1,7 @@
 import React from 'react'
 import cardImg from '../assets/card.png'
+import { Rating } from 'react-simple-star-rating'
+
 function ProductCard(props){
   return (
     <div>
@@ -11,7 +13,8 @@ function ProductCard(props){
     <a href="#" className="btn btn-primary w-100 mb-3">Add to Cart</a>
     <h5 className="card-title">{props.product.title}</h5>
     <p className="card-text mb-1">{props.product.price}-RS</p>
-    <span>⭐⭐⭐⭐⭐</span>
+         <Rating readonly={true} allowFraction={true} transition={true} initialValue={props.product.rating.rate} />({props.product.rating.count})
+     
     </div>
    </div>
     </div>
