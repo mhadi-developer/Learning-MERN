@@ -1,32 +1,25 @@
 
 import './App.css'
+import Home from './pages/home'
+import About  from "./pages/About";
 import Nav from './components/nav'
-import ProductCard from './components/ProductCard'
-import { useState } from 'react'
-import { products } from './data'
+import { BrowserRouter , Routes , Route} from "react-router";
+import Cart from './pages/Cart';
+import Login from './pages/Login';
 
 function App() {
-// let [products,setProducts] = useState(products)
-console.log(products);
-
-
-
 
 return (
   <>
+  <BrowserRouter> 
   <Nav/>
-
-  <div className="container">
-    <div className="row">
-      {
-        products.map(product=>(
-          <div className="col-md-4">
-           <ProductCard product={product}/>
-      </div>
-        ))
-      }
-    </div>
-  </div>
+   <Routes>
+    <Route path ='/' element={<Home/>} />
+     <Route path ='/about' element={<About/>} />
+     <Route path ='/cart' element={<Cart/>} />
+     <Route path ='/login' element={<Login/>} />
+    </Routes>  
+  </BrowserRouter>
 
   </>
 )

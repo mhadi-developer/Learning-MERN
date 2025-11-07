@@ -1,5 +1,4 @@
 import React from 'react'
-import cardImg from '../assets/card.png'
 import { Rating } from 'react-simple-star-rating'
 
 function ProductCard(props){

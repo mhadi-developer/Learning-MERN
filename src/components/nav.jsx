@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router";
 export default function Nav(props) {
 
 
@@ -9,11 +9,13 @@ export default function Nav(props) {
   function handelToggle(){
     setShowMeanue(!showmenue);
   }
+
+
   return <>
   <div className="navbar-wrapper">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container">
-    <a className="navbar-brand" href="#">E-Shop</a>
+    <Link className="navbar-brand" to="/">E-Shop</Link>
     <button className="navbar-toggler" type="button" onClick={handelToggle} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       {
         showmenue ? <i className="bi bi-x-lg"></i>:<span className="navbar-toggler-icon"></span>
@@ -21,30 +23,25 @@ export default function Nav(props) {
     </button>
     <div className={`collapse navbar-collapse ${showmenue? 'show':''}`} id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
-        </li>
        
         <li className="nav-item">
-          <a className="nav-link " href="#">Services</a>
+          <Link className="nav-link" to="/about">About</Link>
         </li>
+        
       </ul>
        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link " aria-current="page" href="#"><i className="bi bi-person"></i></a>
+          <Link className="nav-link " aria-current="page" to="/login"><i className="bi bi-person"></i></Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#"><i className="bi bi-cart"></i></a>
+          <Link className="nav-link" to="/cart"><i className="bi bi-cart"></i></Link>
         </li>
        
         <li className="nav-item">
-          <a className="nav-link " href="#"><i className="bi bi-search"></i></a>
+          <Link className="nav-link " to="#"><i className="bi bi-search"></i></Link>
         </li>
           <li className="nav-item">
-          <a className="nav-link " href="#">{props.num}</a>
+          <Link className="nav-link " to="#">{props.num}</Link>
         </li>
       </ul>
     </div>
