@@ -19,7 +19,7 @@ export default function Nav(props) {
     <button className="navbar-toggler" type="button" onClick={handelToggle} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       {
         showmenue ? <i className="bi bi-x-lg"></i>:<span className="navbar-toggler-icon"></span>
-      }
+}
     </button>
     <div className={`collapse navbar-collapse ${showmenue? 'show':''}`} id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
